@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-item,
+.ant-menu-dark,
+.ant-menu-dark.ant-menu-inline {
+  background-color: rgb(46, 64, 81);
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: rgb(40, 56, 71);
+}
+
+.ant-menu-dark .ant-menu-submenu-open,
+.ant-menu-dark .ant-menu-submenu-selected li {
+  background-color: rgb(40, 56, 71) !important;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: rgb(26, 179, 148) !important;
+}
+
+.ant-menu-item-active,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: rgb(26, 179, 148) !important;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub,
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  background-color: rgb(40, 56, 71) !important;
+}
+
+.ant-menu-vertical .ant-menu-item:not(:last-child) {
+  margin-bottom: 0px !important;
+}
+.ant-menu-vertical .ant-menu-item {
+  margin-top: 0px !important;
+}
+
+.ant-menu-dark .ant-menu-submenu-open,
+.ant-menu-dark .ant-menu-submenu-selected {
+  border-left: 2px solid rgb(26, 179, 148) !important;
+}
+/* rgb(40,56,71)*/

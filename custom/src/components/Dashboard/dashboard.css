@@ -1,0 +1,49 @@
+.header-container {
+  margin: 10px;
+  transition: 0.4s;
+}
+
+.header-expanded {
+  margin-left: 250px;
+}
+
+.header-collapsed {
+  margin-left: 60px;
+}
+
+.sidebar-toggle-button {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 35px;
+  height: 27px;
+  background-color: #00b494;
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-toggle-button:hover {
+  opacity: 0.9;
+}
+
+.sidebar-toggle-bar {
+  width: 20px;
+  height: 2px;
+  margin: 1.8px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-expanded {
+    margin-left: 250px;
+  }
+
+  .header-collapsed {
+    margin-left: 0px;
+  }
+}

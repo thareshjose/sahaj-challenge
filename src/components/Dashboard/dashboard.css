@@ -1,0 +1,116 @@
+.dashboard-controls-container {
+  /* padding-left: 50px; */
+}
+
+.dashboard-controls-main {
+  width: 95%;
+  float: left;
+}
+
+.dashboard-controls {
+  margin-top: 25px;
+}
+
+.folder-title {
+  font-weight: 650;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.dashboard-controls-list-item {
+  padding: 5px;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  cursor: pointer;
+}
+
+.dashboard-controls-list-item:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+.dashboard-mail-count {
+  float: right;
+  margin-right: 5px;
+  background-color: orange;
+  color: #ffffff;
+  width: 30px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid orange;
+  border-radius: 2px;
+}
+
+.dashboard-list-item-icon {
+  margin-right: 10px;
+}
+
+.dashboard-list-view {
+  background-color: #ffffff;
+}
+
+.dashboard-controls-container {
+  text-align: left;
+}
+
+.dashboard-list-view {
+  padding: 0 !important;
+}
+
+.compose-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.compose-btn {
+  background-color: #1ab394;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-align: center;
+  border: 0;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.categories-controls li {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+.categories-controls li::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgb(26, 179, 148);
+  margin-right: 10px;
+}
+
+.categories-controls li:nth-child(2):before {
+  background-color: red;
+}
+
+.categories-controls li:nth-child(3):before {
+  background-color: blue;
+}
+
+.categories-controls li:nth-child(4):before {
+  background-color: green;
+}
+.categories-controls li:nth-child(5):before {
+  background-color: orange;
+}
+@media only screen and (max-width: 768px) {
+  .dashboard-controls-main {
+    width: 100%;
+  }
+  .dashboard-controls-container {
+    width: 100%;
+  }
+  .dashboard-list-view {
+    width: 100%;
+  }
+}

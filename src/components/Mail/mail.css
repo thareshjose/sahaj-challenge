@@ -1,0 +1,38 @@
+.mail-container {
+  margin: 20px;
+}
+
+.mail-head-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.mail-head-container label {
+  padding: 2px 10px;
+  border: 1px solid #ebebec;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.mail-head-container label:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.from,
+.subject,
+.date {
+  font-weight: 550;
+  font-size: 1.1em;
+}
+
+.mail-data {
+  font-weight: 650;
+  font-size: 1.2em;
+  padding-left: 5px;
+}
+
+.mail-body {
+  font-size: 1.4em !important;
+}

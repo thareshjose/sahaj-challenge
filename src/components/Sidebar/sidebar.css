@@ -1,0 +1,40 @@
+.sidebar-container {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2e4051;
+}
+
+.logo {
+  margin: 50px 0;
+  color: rgb(198, 205, 215);
+  margin-left: 20px;
+  font-weight: 600;
+}
+.expanded {
+  width: 250px;
+  transition: 0.4s;
+}
+
+.collapsed {
+  width: 60px;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+  .collapsed {
+    width: 0px;
+  }
+  /* .ant-layout-sider, */
+  /* .ant-layout-sider-dark, */
+  .ant-layout-sider-collapsed {
+    min-width: 0px !important;
+    max-width: 0px !important;
+  }
+
+  /* .ant-layout-sider {
+    max-width: 80px !important;
+    min-width: 80px !important;
+  } */
+}

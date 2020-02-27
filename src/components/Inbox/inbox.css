@@ -1,0 +1,174 @@
+.inbox-head-container {
+  padding-bottom: 30px;
+  margin-left: 10px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inbox-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  padding: 25px 5px;
+  margin: 0;
+}
+.searchbar-container {
+  margin-right: 10px;
+}
+.mail-search-input {
+  outline: none;
+  border: 1px solid #ebebec;
+  border-radius: 2px;
+  /* width: 85%; */
+  padding: 1px 8px;
+  font-size: 1.3em;
+  height: 30px;
+  margin-top: 1px;
+}
+
+.mail-search-input:focus {
+  border-color: #1ab394;
+}
+
+.mail-search-input::-webkit-input-placeholder {
+  font-size: 0.8em;
+  color: rgb(172, 172, 172);
+  font-weight: 450;
+}
+
+.search-button {
+  color: #ffffff;
+  background-color: #1ab394;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 2px;
+}
+
+.mailbox-controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mailbox-actions label,
+.mailbox-page-navigator label {
+  padding: 5px 10px;
+  border: 1px solid #ebebec;
+  border-radius: 2px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.mailbox-page-navigator {
+  margin-right: 10px;
+}
+
+.mail-list-container {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.mail-list-item {
+  border-top: 1px solid #ebebec;
+  padding: 10px 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.mail-list-item > * {
+  cursor: pointer;
+}
+
+.mail-list-item:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.mail-read {
+  background-color: #f9f8f8;
+}
+
+.mail-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-left: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.mail-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #ebebec;
+}
+
+.mail-checkbox-container input:checked ~ .checkmark {
+  background-color: #1ab394;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.mail-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.mail-checkbox-container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 8px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.label-from {
+  margin-left: 80px;
+}
+
+.label-subject {
+  margin-left: 15%;
+}
+
+.label-date {
+  float: right;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+  .inbox-title {
+    font-size: 1.3em;
+  }
+
+  .mail-list-container {
+    font-size: 1em;
+  }
+
+  .label-from {
+    margin-left: 13% !important;
+  }
+
+  .mail-search-input {
+    width: 70%;
+  }
+}
