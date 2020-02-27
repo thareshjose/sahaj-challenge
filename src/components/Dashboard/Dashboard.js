@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { Layout, Menu, Row, Col, Icon } from "antd";
+import { Layout, Row, Col, Icon } from "antd";
 import Inbox from "../Inbox/Inbox";
 import Mail from "../Mail/Mail";
 import Outbox from "../Outbox/Outbox";

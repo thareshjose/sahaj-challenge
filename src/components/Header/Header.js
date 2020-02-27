@@ -6,8 +6,8 @@ import { toggleSidebar } from "../../redux/actions/sidebarActions";
 import { switchUser } from "../../redux/actions/mailActions";
 import { connect } from "react-redux";
 import shortid from "shortid";
-import { Layout, Menu, Icon } from "antd";
-const { Header, Sider, Content } = Layout;
+import { Layout, Icon } from "antd";
+const { Header } = Layout;
 
 const HeaderComponent = props => {
   const toggle = () => {

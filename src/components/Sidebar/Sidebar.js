@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./sidebar.css";
 import "antd/dist/antd.css";
 import { connect } from "react-redux";
 import { toggleSidebar } from "../../redux/actions/sidebarActions";
 import { setSideBarView } from "../../redux/actions/sidebarActions";
 import { Layout, Menu, Icon } from "antd";
-const { Header, Sider, Content } = Layout;
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const Sidebar = props => {
