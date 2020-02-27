@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sahaj-challenge/static/css/main.546019bd.chunk.css",
+    "main.js": "/sahaj-challenge/static/js/main.d7340100.chunk.js",
+    "main.js.map": "/sahaj-challenge/static/js/main.d7340100.chunk.js.map",
+    "runtime-main.js": "/sahaj-challenge/static/js/runtime-main.fa969798.js",
+    "runtime-main.js.map": "/sahaj-challenge/static/js/runtime-main.fa969798.js.map",
+    "static/css/2.d88ce3aa.chunk.css": "/sahaj-challenge/static/css/2.d88ce3aa.chunk.css",
+    "static/js/2.ed8a85e3.chunk.js": "/sahaj-challenge/static/js/2.ed8a85e3.chunk.js",
+    "static/js/2.ed8a85e3.chunk.js.map": "/sahaj-challenge/static/js/2.ed8a85e3.chunk.js.map",
+    "index.html": "/sahaj-challenge/index.html",
+    "precache-manifest.6394cf4b3cf36d3dd8e3fec1714d5dee.js": "/sahaj-challenge/precache-manifest.6394cf4b3cf36d3dd8e3fec1714d5dee.js",
+    "service-worker.js": "/sahaj-challenge/service-worker.js",
+    "static/css/2.d88ce3aa.chunk.css.map": "/sahaj-challenge/static/css/2.d88ce3aa.chunk.css.map",
+    "static/css/main.546019bd.chunk.css.map": "/sahaj-challenge/static/css/main.546019bd.chunk.css.map",
+    "static/js/2.ed8a85e3.chunk.js.LICENSE.txt": "/sahaj-challenge/static/js/2.ed8a85e3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa969798.js",
+    "static/css/2.d88ce3aa.chunk.css",
+    "static/js/2.ed8a85e3.chunk.js",
+    "static/css/main.546019bd.chunk.css",
+    "static/js/main.d7340100.chunk.js"
+  ]
+}
