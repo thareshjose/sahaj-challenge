@@ -11,6 +11,8 @@ const sidebarReducer = (state = initialState, action) => {
       let collapsed = state.collapsed;
 
       return { ...state, collapsed: !collapsed };
+    case "COLLAPSE_SIDEBAR":
+      return { ...state, collapsed: true };
     default:
       return state;
   }

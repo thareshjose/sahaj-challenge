@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./header.css";
 import "antd/dist/antd.css";
 
-import { toggleSidebar } from "../../redux/actions/sidebarActions";
+import {
+  toggleSidebar,
+  collapseSidebar
+} from "../../redux/actions/sidebarActions";
 import { switchUser } from "../../redux/actions/mailActions";
 import { connect } from "react-redux";
 import shortid from "shortid";
+import useWindowDimensions from "../windowDimensions";
 import { Layout, Icon } from "antd";
 const { Header } = Layout;
 
 const HeaderComponent = props => {
+  const { width } = useWindowDimensions();
   const toggle = () => {
     props.toggleSidebar();
   };
@@ -18,6 +23,12 @@ const HeaderComponent = props => {
     let username = event.target.value;
     props.switchUser(username);
   };
+
+  useEffect(() => {
+    if (width <= 768) {
+      props.collapseSidebar();
+    }
+  }, []);
 
   return (
     <Header style={{ background: "#fff", padding: 0 }}>
@@ -71,7 +82,8 @@ const mapStateToProps = store => {
 const mapDispatchToProps = dispatch => {
   return {
     toggleSidebar: () => dispatch(toggleSidebar()),
-    switchUser: username => dispatch(switchUser(username))
+    switchUser: username => dispatch(switchUser(username)),
+    collapseSidebar: () => dispatch(collapseSidebar())
   };
 };
 

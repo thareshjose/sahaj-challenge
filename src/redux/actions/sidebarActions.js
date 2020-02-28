@@ -5,3 +5,7 @@ export const setSideBarView = view => {
 export const toggleSidebar = () => {
   return { type: "TOGGLE_SIDEBAR" };
 };
+
+export const collapseSidebar = () => {
+  return { type: "COLLAPSE_SIDEBAR" };
+};
