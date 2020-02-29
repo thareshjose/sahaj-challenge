@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sahaj-challenge/precache-manifest.f180258fe9e265a36d1c708048b22913.js"
+  "/sahaj-challenge/precache-manifest.b78c5f9c26311adfb36d1acd0c79e56f.js"
 );
 
 self.addEventListener('message', (event) => {
