@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/sahaj-challenge/static/css/main.db089047.chunk.css",
-    "main.js": "/sahaj-challenge/static/js/main.69ff6ae0.chunk.js",
-    "main.js.map": "/sahaj-challenge/static/js/main.69ff6ae0.chunk.js.map",
+    "main.css": "/sahaj-challenge/static/css/main.5dcd52ff.chunk.css",
+    "main.js": "/sahaj-challenge/static/js/main.914d5196.chunk.js",
+    "main.js.map": "/sahaj-challenge/static/js/main.914d5196.chunk.js.map",
     "runtime-main.js": "/sahaj-challenge/static/js/runtime-main.fa969798.js",
     "runtime-main.js.map": "/sahaj-challenge/static/js/runtime-main.fa969798.js.map",
     "static/css/2.d88ce3aa.chunk.css": "/sahaj-challenge/static/css/2.d88ce3aa.chunk.css",
     "static/js/2.002b1d2a.chunk.js": "/sahaj-challenge/static/js/2.002b1d2a.chunk.js",
     "static/js/2.002b1d2a.chunk.js.map": "/sahaj-challenge/static/js/2.002b1d2a.chunk.js.map",
     "index.html": "/sahaj-challenge/index.html",
-    "precache-manifest.60352d9a60d41ed86b7d4d874710fb18.js": "/sahaj-challenge/precache-manifest.60352d9a60d41ed86b7d4d874710fb18.js",
+    "precache-manifest.f180258fe9e265a36d1c708048b22913.js": "/sahaj-challenge/precache-manifest.f180258fe9e265a36d1c708048b22913.js",
     "service-worker.js": "/sahaj-challenge/service-worker.js",
     "static/css/2.d88ce3aa.chunk.css.map": "/sahaj-challenge/static/css/2.d88ce3aa.chunk.css.map",
-    "static/css/main.db089047.chunk.css.map": "/sahaj-challenge/static/css/main.db089047.chunk.css.map",
+    "static/css/main.5dcd52ff.chunk.css.map": "/sahaj-challenge/static/css/main.5dcd52ff.chunk.css.map",
     "static/js/2.002b1d2a.chunk.js.LICENSE.txt": "/sahaj-challenge/static/js/2.002b1d2a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fa969798.js",
     "static/css/2.d88ce3aa.chunk.css",
     "static/js/2.002b1d2a.chunk.js",
-    "static/css/main.db089047.chunk.css",
-    "static/js/main.69ff6ae0.chunk.js"
+    "static/css/main.5dcd52ff.chunk.css",
+    "static/js/main.914d5196.chunk.js"
   ]
 }
