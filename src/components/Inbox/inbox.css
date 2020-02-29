@@ -144,15 +144,18 @@
 
 .label-from {
   margin-left: 80px;
+  cursor: pointer;
 }
 
 .label-subject {
   margin-left: 15%;
+  cursor: pointer;
 }
 
 .label-date {
   float: right;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 425px) {
