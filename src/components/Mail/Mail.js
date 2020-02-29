@@ -39,7 +39,11 @@ const Mail = props => {
         <p className="date">
           Date: <span className="mail-data">{openedMail.date}</span>
         </p>
-        <p className="mail-body">{openedMail.body}</p>
+        <div className="mail-body">
+          {openedMail.body.split(/\r?\n/).map((line, index) => (
+            <p key={index}>{line}</p>
+          ))}
+        </div>
       </div>
     </div>
   );
