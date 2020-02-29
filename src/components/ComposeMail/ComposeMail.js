@@ -48,6 +48,7 @@ const ComposeMail = props => {
           <input
             type="text"
             className="compose-mail-input"
+            placeholder="Enter address as tharesh or sahaj"
             ref={toAddress}
             onChange={validateToAddress}
           />

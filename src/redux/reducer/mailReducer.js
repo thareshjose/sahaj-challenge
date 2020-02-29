@@ -3,20 +3,50 @@ const initialState = {
   mockData: [],
   registeredUsers: ["tharesh", "sahaj"],
   enableSent: false,
-  loggedUser: "tharesh",
+  loggedUser: "",
   mailbox: [],
   inboxMailCount: 0,
   openedMail: [],
   trashMails: [],
   mailCount: 0,
-  outbox: []
+  outbox: [],
+  isAuthenticated: false
 };
 
 const mailReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "VALIDATE_LOGIN":
+      let { user } = action;
+
+      return Object.assign({}, state, {
+        loggedUser: user,
+        isAuthenticated: true
+      });
     case "SET_MAIL_VIEW":
       const { view } = action;
       return Object.assign({}, state, { view });
+
+    case "GET_USER_MAILS":
+      const currentUser = state.loggedUser;
+      let currentUserData = state.mockData.filter(x =>
+        x.username === currentUser ? x.mails : ""
+      );
+      let currentUserMails = currentUserData[0].mails;
+      let cMailCount = currentUserMails.length;
+      currentUserMails = getInboxMails(currentUserMails);
+      const outMails = currentUserMails.filter(mail => mail.status === "sent");
+      let cTrash = currentUserMails.filter(mail => mail.status === "deleted");
+      currentUserMails.sort((x, y) => (x.id < y.id ? 1 : -1));
+      let inMailCount = getUnreadMailCount(currentUserMails);
+      return Object.assign({}, state, {
+        mailbox: currentUserMails,
+        inboxMailCount: inMailCount,
+        trashMails: cTrash,
+        mailCount: cMailCount,
+        outbox: outMails
+      });
+
+      return Object.assign({}, state);
 
     case "SET_MAILBOX_DATA":
       const { data } = action;
@@ -134,9 +164,11 @@ const mailReducer = (state = initialState, action) => {
         outbox: outboxMails
       });
 
-    case "CHANGE_USER":
-      let username = action.username;
-      return Object.assign({}, state, { loggedUser: username });
+    case "LOGOUT":
+      return Object.assign({}, state, {
+        loggedUser: "",
+        isAuthenticated: false
+      });
     default:
       return state;
   }

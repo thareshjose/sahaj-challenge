@@ -80,6 +80,11 @@
   padding: 2px 8px;
 }
 
+.logout-text {
+  margin-left: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
 @media only screen and (max-width: 768px) {
   .toggle-search-container input {
     display: none;

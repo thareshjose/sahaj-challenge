@@ -1,3 +1,10 @@
+export const validateLogin = username => {
+  return { type: "VALIDATE_LOGIN", user: username };
+};
+
+export const getUserMails = () => {
+  return { type: "GET_USER_MAILS" };
+};
 export const setMailView = view => {
   return { type: "SET_MAIL_VIEW", view: view };
 };
@@ -29,15 +36,15 @@ export const toggleSent = () => {
   return { type: "TOGGLE_SENT" };
 };
 
-export const switchUser = username => {
+export const logoutUser = () => {
   let mailData = JSON.parse(localStorage.getItem("data"));
   return dispatch => {
-    dispatch(changeUser(username));
-    dispatch(setMailboxData(mailData));
-    dispatch(setMailView("inbox"));
+    dispatch(logout());
+    // dispatch(setMailboxData(mailData));
+    // dispatch(setMailView("inbox"));
   };
 };
 
-export const changeUser = username => {
-  return { type: "CHANGE_USER", username: username };
+export const logout = () => {
+  return { type: "LOGOUT" };
 };

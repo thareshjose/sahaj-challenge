@@ -6,9 +6,8 @@ import {
   toggleSidebar,
   collapseSidebar
 } from "../../redux/actions/sidebarActions";
-import { switchUser } from "../../redux/actions/mailActions";
+import { logoutUser } from "../../redux/actions/mailActions";
 import { connect } from "react-redux";
-import shortid from "shortid";
 import useWindowDimensions from "../windowDimensions";
 import { Layout, Icon } from "antd";
 const { Header } = Layout;
@@ -19,9 +18,9 @@ const HeaderComponent = props => {
     props.toggleSidebar();
   };
 
-  const changeUser = event => {
-    let username = event.target.value;
-    props.switchUser(username);
+  const logout = () => {
+    props.history.push("/");
+    props.logoutUser();
   };
 
   useEffect(() => {
@@ -50,19 +49,10 @@ const HeaderComponent = props => {
             <Icon type="bell" />
           </label>
           <label className="switch-user-container">
-            Switch
-            <select
-              name="users"
-              onChange={changeUser}
-              value={props.loggedUser}
-              className="switch-user-select"
-            >
-              {props.registeredUsers.map(user => (
-                <option key={shortid.generate()} value={user}>
-                  {user}
-                </option>
-              ))}
-            </select>
+            {props.loggedUser}
+            <label onClick={() => logout()} className="logout-text">
+              Logout
+            </label>
           </label>
         </div>
       </div>
@@ -82,7 +72,7 @@ const mapStateToProps = store => {
 const mapDispatchToProps = dispatch => {
   return {
     toggleSidebar: () => dispatch(toggleSidebar()),
-    switchUser: username => dispatch(switchUser(username)),
+    logoutUser: () => dispatch(logoutUser()),
     collapseSidebar: () => dispatch(collapseSidebar())
   };
 };

@@ -1,7 +1,7 @@
 export const data = [
   {
     username: "tharesh",
-    password: "test",
+    password: "password",
     mails: [
       {
         id: 1,
@@ -74,7 +74,7 @@ export const data = [
   },
   {
     username: "sahaj",
-    password: "sahaj",
+    password: "password",
     mails: []
   }
 ];

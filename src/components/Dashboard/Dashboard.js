@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Layout, Row, Col, Icon } from "antd";
 import Inbox from "../Inbox/Inbox";
@@ -7,7 +7,6 @@ import Outbox from "../Outbox/Outbox";
 import Trash from "../Trash/Trash";
 import ComposeMail from "../ComposeMail/ComposeMail";
 import { setMailView } from "../../redux/actions/mailActions";
-import { setMailboxData } from "../../redux/actions/mailActions";
 import "antd/dist/antd.css";
 import "./dashboard.css";
 
@@ -39,14 +38,6 @@ const getSubComponent = view => {
 };
 
 const Dashboard = props => {
-  useEffect(() => {
-    let data = JSON.parse(localStorage.getItem("data"));
-    if (props.mockData) {
-      setMailboxData(data);
-    }
-    // localStorage.setItem("data", JSON.stringify(data)); uncomment and test after send /update
-  }, []);
-
   const setMailboxData = data => {
     props.setMailboxData(data);
   };
@@ -143,8 +134,7 @@ const mapStateToProps = store => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setMailView: view => dispatch(setMailView(view)),
-    setMailboxData: data => dispatch(setMailboxData(data))
+    setMailView: view => dispatch(setMailView(view))
   };
 };
 
