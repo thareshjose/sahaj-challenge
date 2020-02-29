@@ -4,6 +4,7 @@ import { Layout, Row, Col, Icon } from "antd";
 import Inbox from "../Inbox/Inbox";
 import Mail from "../Mail/Mail";
 import Outbox from "../Outbox/Outbox";
+import Trash from "../Trash/Trash";
 import ComposeMail from "../ComposeMail/ComposeMail";
 import { setMailView } from "../../redux/actions/mailActions";
 import { setMailboxData } from "../../redux/actions/mailActions";
@@ -27,6 +28,10 @@ const getSubComponent = view => {
     {
       name: "outbox",
       component: Outbox
+    },
+    {
+      name: "trash",
+      component: Trash
     }
   ];
   let component = components.filter(x => x.name === view);
@@ -99,7 +104,10 @@ const Dashboard = props => {
                     <Icon type="file" className="dashboard-list-item-icon" />
                     Draft
                   </li>
-                  <li className="dashboard-controls-list-item">
+                  <li
+                    className="dashboard-controls-list-item"
+                    onClick={() => setMailView("trash")}
+                  >
                     <Icon type="delete" className="dashboard-list-item-icon" />
                     Trash
                   </li>

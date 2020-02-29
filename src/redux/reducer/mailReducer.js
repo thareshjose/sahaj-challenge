@@ -59,7 +59,7 @@ const mailReducer = (state = initialState, action) => {
     case "DELETE_MAIL":
       let idList = action.id;
       let emailList = [...state.mailbox];
-      let trashMails = [];
+      let trashMails = [...state.trashMails];
       idList.forEach(id => {
         emailList.forEach((mail, index) => {
           if (mail.id === id) {
